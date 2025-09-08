@@ -2,7 +2,7 @@
 
 ## centrax 3
 
-[wie einen neuen workflow machen](wie einen neuen workflow machen.md)\
+[wie einen neuen workflow machen](./wie einen neuen workflow machen.md)\
 [welche activity namen nehmen forms.xml und actors.xml](welche activity namen nehmen forms.xml und actors.xml.md)\
 [wie einen parameter an einem workflow updaten](wie parameter an einem workflow updaten.md)\
 [wie den parameter storageConditions zum restprobenworkflow hinzufuegen](wie den parameter storageConditions zum restprobenworkflow hinzufuegen.md)\
