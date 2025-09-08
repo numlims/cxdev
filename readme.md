@@ -11,8 +11,8 @@
 [wie einen messbefund speichern](wie-einen-messbefund-speichern.md)\
 [wie eine sample tabelle befuellen](wie-eine-sample-tabelle-befuellen.md)\
 [wie bekommt man CatalogDataObjects fuer amount, centrifugation etc](wie-bekommt-man-CatalogDataObjects-fuer-amount-centrifugation-etc.md)\
-[wie einen workflow updaten](wie-einen-workflow-updaten.md)\
+[wie einen workflow updaten](wie-einen-workflow-updaten.md)
 
 ## centrax 4
 
-[port from cx3 to cx4](port-from-cx3-to-cx4.md)\
+[port from cx3 to cx4](port-from-cx3-to-cx4.md)
