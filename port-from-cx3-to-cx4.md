@@ -17,6 +17,13 @@ not moving to kairos: `com.vaadin.ui.Button` to
 `de.kairos.centraxx.workflow.component.AmountField` to
 `de.kairos.centraxx.workflow.component.KairosAmountField`.
 
+`import de.kairos.centraxx.workflow.components.Popup;` to
+`import de.kairos.ui.components.Popup;`
+
+Check if true: 
+`import de.kairos.centraxx.workflow.components.WorkflowUtils;`
+is now `import de.kairos.centraxx.workflow.util.Utils;`
+
 there doesn't seem to be a com.vaadin.ui.Panel anymore.
 `import com.vaadin.data.Property.ValueChangeEvent;` (Vaadin 7) to
 `import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;` (Vaadin 14)
