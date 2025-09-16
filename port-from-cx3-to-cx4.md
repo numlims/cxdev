@@ -15,7 +15,7 @@ not moving to kairos: `com.vaadin.ui.Button` to
 `com.vaadin.flow.component.Component`,
 `com.vaadin.ui.HorizontalLayout ` to
 `com.vaadin.flow.component.orderedlayout.HorizontalLayout`,
-`VerticalLayout`.
+`VerticalLayout` to `com.vaadin.flow.component.orderedlayout.VerticalLayout`.
 
 `de.kairos.centraxx.workflow.component.AmountField` to
 `de.kairos.centraxx.workflow.component.KairosAmountField`.
