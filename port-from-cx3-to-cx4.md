@@ -20,6 +20,9 @@ not moving to kairos: `com.vaadin.ui.Button` to
 `import de.kairos.centraxx.workflow.components.Popup;` to
 `import de.kairos.ui.components.Popup;`
 
+`import de.kairos.centraxx.workflow.centraxxdata.dataobjects.catalog.CatalogDataObject;` to
+`import de.kairos.centraxx.workflow.data.dataobjects.catalog.CatalogDataObject;`
+
 Check if true: 
 `import de.kairos.centraxx.workflow.components.WorkflowUtils;`
 is now `import de.kairos.centraxx.workflow.util.Utils;`
