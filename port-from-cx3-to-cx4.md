@@ -2,6 +2,9 @@ package change from
 `de.kairos.centraxx.workflow.centraxxdata.dataobjects` to
 `de.kairos.centraxx.workflow.data.dataobjects`.
 
+from `de.kairos.centraxx.workflow.data.services.*` to
+`de.kairos.centraxx.workflow.services.*`
+
 `com.vaadin.ui.TextField` to
 `de.kairos.ui.components.KairosTextField`, also for `Label` to
 `KairosLabel`, `ComboBox` to `KairosComboBox`, `GridLayout` to `KairosGridLayout`,
