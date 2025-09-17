@@ -1,3 +1,8 @@
+a little collection of package changes and code snippets when going
+from cx 3 to cx 4.
+
+## package changes
+
 package change from
 `de.kairos.centraxx.workflow.centraxxdata.dataobjects` to
 `de.kairos.centraxx.workflow.data.dataobjects`.
@@ -31,6 +36,8 @@ kairos `DateTimeField` becomes
 `de.kairos.centraxx.workflow.components` drops an s, to
 `de.kairos.centraxx.workflow.component`.
 
+## field validation
+
 `FieldValidationList` is no more, there is a
 `de.kairos.centraxx.workflow.validator.MandatoryFieldValidator`.
 
@@ -45,9 +52,13 @@ use like this:
   return validator.isValid();  
 ```
 
+## workflow utils
+
 WorkflowUtils seems to be no more
 (`WorkflowUtils.setValuesToComboBoxByDataObject`), maybe
 `de.kairos.centraxx.workflow.component.simpleassigncomponent.KairosComboBoxItem`.
+
+## message resources
 
 in cx3 we use a local utils.MessageResources. maybe continue using
 this, otherwise kairos `MessageResources` are in
@@ -60,6 +71,8 @@ use them like:
   MessageResources(this.getClass());
   messages.get("scan.csv.upload")  
 ```
+
+## table moving to grid?
 
 wo ist `com.vaadin.ui.Table` jetzt? `import
 de.kairos.ui.components.KairosTable`?
@@ -122,18 +135,20 @@ grid.addColumn(new ComponentRenderer<>(person -> {
        new HorizontalLayout(update, remove);
     return new VerticalLayout(name, buttons);
 })).setHeader("Actions");
-```                            
+```
 
+## click listeners
 
 `com.vaadin.ui.Button.ClickListener` seems to be no more,
 `this.someButton.addClickListener(l -> onScanButtonClicked())` seems
 to work out of the box?
 
+## combo box
+
 ComboBoxes are now created like this:
 
 ```
-private final KairosComboBox<CatalogDataObject> myBox = new
-KairosComboBox<>(CatalogDataObject::getName, true)
+KairosComboBox<CatalogDataObject> myBox = new KairosComboBox<>(CatalogDataObject::getName, true)
 ```
 
 and items are set like this:
@@ -142,9 +157,22 @@ and items are set like this:
 myBox.setItems(myDataObjects);
 ```
 
-kairos doesn't offer a javadoc for classes like KairosComboBox etc in
-vaadin flow components.
+## text field
 
+to create a TextField with label, say:
+
+```
+myTextField = new KairosTextField();
+myTextField.setLabel("my label");
+```
+
+## documentation for `de.kairos.ui`
+
+kairos doesn't offer a javadoc for classes like `KairosComboBox` in
+`de.kairos.ui` (part of vaadin flow components jar) and says it
+doesn't plan to do so in the future.
+
+## specify lowagie
 
 specify lowagie in the pom.xml for com.lowagie.text.* to load:
 
@@ -154,8 +182,18 @@ specify lowagie in the pom.xml for com.lowagie.text.* to load:
       <version>2.1.7</version>
     </dependency>
 
+## file export
+
 class `de.kairos.centraxx.workflow.helper.ExportFileUtils` has moved to
 `de.kairos.centraxx.workflow.util.ExportFileUtils`.
 
 ExportFileUtils doesn't have exportFile() anymore, maybe it moved to
 FileDownloader.download()?
+
+## getting and setting workflow task variables
+
+`getWorkflowVariable()` seems to be callable from ui and controller.
+
+how does setting work? with `addWorkflowVariable()` or
+`setVariablePool()`? they only seem to be callable from the
+controller, but maybe that's ok.
