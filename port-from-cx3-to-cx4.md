@@ -1,26 +1,26 @@
-a little collection of package changes and code snippets when going
-from cx 3 to cx 4.
+package changes and code snippets when going from cx 3 to cx 4.
 
 ## package changes
 
-package change from
-`de.kairos.centraxx.workflow.centraxxdata.dataobjects` to
-`de.kairos.centraxx.workflow.data.dataobjects`.
+package name changes:
+`de.kairos.centraxx.workflow.centraxxdata.dataobjects` becomes
+`de.kairos.centraxx.workflow.data.dataobjects`,
+`de.kairos.centraxx.workflow.data.services.*` becomes
+`de.kairos.centraxx.workflow.services.*`.
 
-from `de.kairos.centraxx.workflow.data.services.*` to
-`de.kairos.centraxx.workflow.services.*`
+some ui classes move from `com.vaadin.ui` to `de.kairos.ui.components`
+and get 'Kairos' prefixed to their name: `TextField` as
+`KairosTextField`, `Label` as `KairosLabel`, `ComboBox` as
+`KairosComboBox`, `GridLayout` as `KairosGridLayout`.
 
-`com.vaadin.ui.TextField` to
-`de.kairos.ui.components.KairosTextField`, also for `Label` to
-`KairosLabel`, `ComboBox` to `KairosComboBox`, `GridLayout` to `KairosGridLayout`,
-
-not moving to kairos: `com.vaadin.ui.Button` to
+ui classes that are not moving to `de.kairos.ui`:
+`com.vaadin.ui.Button` becomes
 `com.vaadin.flow.component.button.Button`, `Checkbox` to
 `com.vaadin.flow.component.checkbox.Checkbox`, `Component` to
-`com.vaadin.flow.component.Component`,
-`com.vaadin.ui.HorizontalLayout ` to
-`com.vaadin.flow.component.orderedlayout.HorizontalLayout`,
-`VerticalLayout` to `com.vaadin.flow.component.orderedlayout.VerticalLayout`.
+`com.vaadin.flow.component.Component`, `com.vaadin.ui.HorizontalLayout
+` to `com.vaadin.flow.component.orderedlayout.HorizontalLayout`,
+`VerticalLayout` to
+`com.vaadin.flow.component.orderedlayout.VerticalLayout`.
 
 `de.kairos.centraxx.workflow.component.AmountField` to
 `de.kairos.centraxx.workflow.component.KairosAmountField`.
@@ -36,6 +36,7 @@ Check if true:
 is now `import de.kairos.centraxx.workflow.util.Utils;`
 
 there doesn't seem to be a com.vaadin.ui.Panel anymore.
+
 `import com.vaadin.data.Property.ValueChangeEvent;` (Vaadin 7) to
 `import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;` (Vaadin 14)
 `import com.vaadin.data.Property.ValueChangeListener;` (Vaadin 7) to
