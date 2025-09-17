@@ -7,6 +7,9 @@ package change from
 `de.kairos.centraxx.workflow.centraxxdata.dataobjects` to
 `de.kairos.centraxx.workflow.data.dataobjects`.
 
+from `de.kairos.centraxx.workflow.data.services.*` to
+`de.kairos.centraxx.workflow.services.*`
+
 `com.vaadin.ui.TextField` to
 `de.kairos.ui.components.KairosTextField`, also for `Label` to
 `KairosLabel`, `ComboBox` to `KairosComboBox`, `GridLayout` to `KairosGridLayout`,
@@ -17,13 +20,26 @@ not moving to kairos: `com.vaadin.ui.Button` to
 `com.vaadin.flow.component.Component`,
 `com.vaadin.ui.HorizontalLayout ` to
 `com.vaadin.flow.component.orderedlayout.HorizontalLayout`,
-`VerticalLayout`.
+`VerticalLayout` to `com.vaadin.flow.component.orderedlayout.VerticalLayout`.
 
 `de.kairos.centraxx.workflow.component.AmountField` to
 `de.kairos.centraxx.workflow.component.KairosAmountField`.
 
-there doesn`t seem to be a com.vaadin.ui.Panel anymore.
+`import de.kairos.centraxx.workflow.components.Popup;` to
+`import de.kairos.ui.components.Popup;`
 
+`import de.kairos.centraxx.workflow.centraxxdata.dataobjects.catalog.CatalogDataObject;` to
+`import de.kairos.centraxx.workflow.data.dataobjects.catalog.CatalogDataObject;`
+
+Check if true: 
+`import de.kairos.centraxx.workflow.components.WorkflowUtils;`
+is now `import de.kairos.centraxx.workflow.util.Utils;`
+
+there doesn't seem to be a com.vaadin.ui.Panel anymore.
+`import com.vaadin.data.Property.ValueChangeEvent;` (Vaadin 7) to
+`import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;` (Vaadin 14)
+`import com.vaadin.data.Property.ValueChangeListener;` (Vaadin 7) to
+`import com.vaadin.flow.component.HasValue.ValueChangeListener;` (Vaadin 14)
 Notification moves to `de.kairos.ui.components.Notification`.
 
 Unit moves to `com.vaadin.flow.component.Unit`.
