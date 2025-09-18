@@ -30,7 +30,9 @@ ui classes that are not moving to `de.kairos.ui`:
 
 `import de.kairos.centraxx.workflow.centraxxdata.dataobjects.catalog.CatalogDataObject;` to
 `import de.kairos.centraxx.workflow.data.dataobjects.catalog.CatalogDataObject;`
+
 The most important change:
+
 `import de.kairos.centraxx.workflow.components.UIComponentFactory;` to
 `import de.kairos.centraxx.workflow.component.UIComponentFactory;`
 
