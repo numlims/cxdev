@@ -37,6 +37,19 @@ The most important change:
 `import de.kairos.centraxx.workflow.component.UIComponentFactory;`
 `UIComponentFactory` has NO more `createLabel`, `createCheckBox` etc. 
 
+e.g. before:
+`Component component = null;
+...
+component = UIComponentFactory.createTextField(false, "50px", null);`
+
+now:
+`Component component = null;
+...
+KairosTextField textField = new KairosTextField();
+            textField.setWidth("50px");
+            component = textField;`
+
+
 Check if true: 
 `import de.kairos.centraxx.workflow.components.WorkflowUtils;`
 is now `import de.kairos.centraxx.workflow.util.Utils;`
