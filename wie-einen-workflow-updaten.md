@@ -1,5 +1,10 @@
 # im prod
 
+## bei rollback 'automatisch starten' aktivieren
+
+wenn ein workflow geloescht wird faellt er auf die version davor zurueck.  diese mit play-button starten und 'workflow automatisch starten' aktivieren.
+
+
 ## ohne neuen parameter
 
 workflow version in bpmn hochsetzen.
@@ -34,9 +39,6 @@ workflow neu hochgeladen wurde, dann nicht den play button in workflow-prozesse 
 gruppen-inbox (workflow > workflow-aufgaben) **zwei** mal play
 klicken, damit die aktualisierten einstellungen uebernommen werden.
 
-## bei rollback 'automatisch starten' aktivieren
-
-wenn ein workflow geloescht wird faellt er auf die version davor zurueck.  diese mit play-button starten und 'workflow automatisch starten' aktivieren.
 
 
 # im dev
